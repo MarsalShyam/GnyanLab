@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <div>ram is a good boy</div>
+      <div className='bg-red-500'>this is a second line</div>
     </>
   )
 }
