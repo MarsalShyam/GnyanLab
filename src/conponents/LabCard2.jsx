@@ -2,16 +2,17 @@ import React from 'react'
 
 const ServisesCard = ({ project }) => {
   return (
-    <div className='bg-white shadow-lg rounded-xl py-0 '>
+    <div className='bg-[#b9d7ee] shadow-lg rounded-xl py-0 '>
       <img src={project.image} alt={project.title} className='rounded-t-lg h-[50%] w-full' />
       <div className='p-4 h-[50%] '>
         <div className='w-full h-16 '>
           <h3 className='mb-2 text-2xl font-bold tracking-tighter line-clamp-2'>{project.title}</h3>
         </div>
-        <div className='flex justify-start items-center gap-3'>
+        <p className='text-sm'>{project.description}</p>
+        {/* <div className='flex justify-start items-center gap-3'>
           <div className='text-blue-900 bg-[#F2F2F2] rounded-full p-1 text-[13px] font-bold'>{project.authpic}</div>
           <span className='text-sm text-gray-400'>By {project.author}</span>
-        </div>
+        </div> */}
         
 
         

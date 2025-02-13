@@ -1,10 +1,10 @@
 import React from 'react'
 import {useState} from 'react'
-// import logo from "../assets/logo.png"
+import logo from "../assets/logo.png"
 import {LINKS} from "../constants"
 import { FaTimes } from 'react-icons/fa'
 import {FaBars} from 'react-icons/fa'
-import GNYAN1 from '../assets/GNYAN1.png'
+// import GNYAN1 from '../assets/GNYAN1.png'
 
 const Navbar = () => {
     const [isMobileMenuOpen,setIsMobileMenuOpen]=useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className='fixed top-4 z-50 flex w-full flex-col items-center justify-center'>
         <div className='flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg'>
-            <img className='filter invert' src={GNYAN1} alt="GNYAN1" width={80} height={22}/>
+            <img className='filter invert' src={logo} alt="GNYAN1" width={80} height={22}/>
             <div className='hidden space-x-6 lg:flex'>
                 {LINKS.map((link,index)=>(
                     <a key={index} href={`#${link.targetId}`} className={`text-sm ${index!==0? "border-l-2 border-neutral-300/20 pl-2":""} hover:opacity-50`} onClick={(e)=>handleScroll(e,link.targetId)}>

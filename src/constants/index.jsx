@@ -5,8 +5,8 @@ export const LINKS = [
     { text: "III year", targetId: "IIIyear" },
     { text: "IV year", targetId: "IVyear" },
     { text: "About", targetId: "about" },
-    { text: "Mission", targetId: "mission" },
-    { text: "Review", targetId: "review" },
+    // { text: "Mission", targetId: "mission" },
+    // { text: "Review", targetId: "review" },
     { text: "ContactUs", targetId: "contact" },
   ];
 
@@ -63,4 +63,59 @@ export const LINKS = [
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
     },
+  ]
+
+  export const IIIYEAR=[
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    },
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    },
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    },
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    },
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    },
+    {
+      image: hero,
+      title: "Spaghetti Carbonara",
+      description: "Creamy pasta with bacon and cheese",
+    }
+  ]
+  export const IVYEAR=[
+    {
+      image:hero,
+      title:"subject",
+      description:"It is the best subject ever i seem"
+    },
+    {
+      image:hero,
+      title:"subject",
+      description:"It is the best subject ever i seem"
+    },
+    {
+      image:hero,
+      title:"subject",
+      description:"It is the best subject ever i seem"
+    },
+    {
+      image:hero,
+      title:"subject",
+      description:"It is the best subject ever i seem"
+    }
   ]
