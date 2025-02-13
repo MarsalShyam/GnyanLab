@@ -1,5 +1,6 @@
 
 import './App.css'
+import About from './conponents/About'
 import HeroSection from './conponents/HeroSection'
 import Navbar from './conponents/Navbar'
 
@@ -13,7 +14,7 @@ function App() {
       <HeroSection/>
       <Navbar/>
       <Button/>
-      
+      <About/>
       </div>
     </>
   )
