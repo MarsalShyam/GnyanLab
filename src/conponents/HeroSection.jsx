@@ -5,7 +5,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import slider1 from '../assets/slider1.jpg'
 // import GNYAN1 from '../assets/GNYAN1.png'
-import GNYAN2 from '../assets/GNYAN2.png'
+// import GNYAN2 from '../assets/GNYAN2.png'
 import gn from '../assets/gn.png'
 
 const HeroSection = () => {

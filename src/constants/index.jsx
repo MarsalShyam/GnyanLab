@@ -1,4 +1,12 @@
 import hero from "../assets/nor.avif"
+import db from "../assets/db.jpg"
+import cloudimg from "../assets/cloudimg.jpg"
+import bigdataimg from "../assets/bigdataimg.avif"
+import iotimg from "../assets/iotimg.jpg"
+import multimediaimg from "../assets/multimediaimg.avif"
+import sdnimg from "../assets/sdnimg.jpg"
+import ooseimg from "../assets/ooseimg.png"
+
 export const LINKS = [
     { text: "I year", targetId: "Iyear" },
     { text: "II year", targetId: "IIyear" },
@@ -15,26 +23,36 @@ export const LINKS = [
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
   ]
   export const IIYEAR=[
@@ -42,81 +60,112 @@ export const LINKS = [
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image: hero,
       title: "Spaghetti Carbonara",
       description: "Creamy pasta with bacon and cheese",
+      authpic:db,
+      author:"ganesh",
     },
   ]
 
   export const IIIYEAR=[
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: cloudimg,
+      title: "CLOUD COMPUTING",
+      description: "Mastering Cloud Architecture, Virtualization, and Security: Exploring Models, Infrastructure, and Deployment Strategies to Build Scalable and Secure Cloud Solutions",
+      authpic:db,
+      author:"ganesh Das (Assistence Proffesor)",
     },
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: iotimg,
+      title: "EMBEDDED SYSTEMS AND IOT",
+      description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
+      authpic:db,
+      author:"ganesh",
     },
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: bigdataimg,
+      title: "BIG DATA ANALYTICS",
+      description: "From Big Data Fundamentals to Advanced Analytics: Mastering NoSQL, Hadoop, and MapReduce for Real-World Data Challenges",
+      authpic:db,
+      author:"ganesh",
     },
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: multimediaimg,
+      title: "Multimedia and Animation",
+      description: "Comprehensive Guide to Multimedia and Animation: A Lab Manual for Learning Design Principles, Tools, and Practical Applications in an Academic Setting",
+      authpic:db,
+      author:"ganesh",
     },
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: sdnimg,
+      title: "Software Defined Networks",
+      description: "Mastering Software Defined Networks: A Comprehensive Lab Manual for Designing, Configuring, and Managing Programmable, Scalable, and Future-Ready Network Architectures Using Cutting-Edge Tools and Techniques",
+      authpic:db,
+      author:"ganesh",
     },
     {
-      image: hero,
-      title: "Spaghetti Carbonara",
-      description: "Creamy pasta with bacon and cheese",
+      image: ooseimg,
+      // title: "Object Oriented Software Engeneering",
+      title:"OOSE",
+      description: "Mastering Object-Oriented Software Engineering: A Comprehensive Lab Manual for Designing, Developing, and Deploying Robust, Scalable, and Maintainable Software Systems Using Modern Principles and Best Practices",
+      authpic:db,
+      author:"ganesh",
     }
   ]
   export const IVYEAR=[
     {
       image:hero,
       title:"subject",
-      description:"It is the best subject ever i seem"
+      description:"It is the best subject ever i seem",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image:hero,
       title:"subject",
-      description:"It is the best subject ever i seem"
+      description:"It is the best subject ever i seem",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image:hero,
       title:"subject",
-      description:"It is the best subject ever i seem"
+      description:"It is the best subject ever i seem",
+      authpic:db,
+      author:"ganesh",
     },
     {
       image:hero,
       title:"subject",
-      description:"It is the best subject ever i seem"
+      description:"It is the best subject ever i seem",
+      authpic:db,
+      author:"ganesh",
     }
   ]
 
