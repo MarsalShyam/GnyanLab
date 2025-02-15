@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   base:'/GnyanLab/',
+  build: {
+    outDir: "dist"
+  },
   // The base path must match your repository name (GnyanLab) and include a trailing slash (/).
   plugins: [react(),
     tailwindcss()],
