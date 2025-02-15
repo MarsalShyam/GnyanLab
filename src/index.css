@@ -1,1 +1,7 @@
 @import "tailwindcss";
+.title {
+    white-space: nowrap;       /* Prevents text from wrapping to the next line */
+    overflow: hidden;          /* Hides any content that overflows the container */
+    text-overflow: ellipsis;   /* Adds an ellipsis (...) when the text overflows */
+    max-width: 100%;           /* Ensures the text respects the container's width */
+  }

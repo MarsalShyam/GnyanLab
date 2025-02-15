@@ -103,7 +103,7 @@ export const LINKS = [
     },
     {
       image: iotimg,
-      title: "EMBEDDED SYSTEMS AND IOT",
+      title: "EMBEDDED SYSTEMS AND IOT ram is a good boy",
       description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
       authpic:db,
       author:"ganesh",
