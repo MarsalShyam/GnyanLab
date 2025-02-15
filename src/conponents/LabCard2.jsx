@@ -2,18 +2,20 @@ import React from 'react';
 
 const ServisesCard = ({ project }) => {
   return (
-    <div className='bg-[#b9d7ee] shadow-lg rounded-xl overflow-hidden'>
+    <div className='bg-[#b9d7ee] shadow-lg rounded-xl overflow-hidden flex flex-col'>
       {/* Image Section */}
-      <img
-        src={project.image}
-        alt={project.title}
-        className='w-full h-auto object-cover'
-      />
+      <div className='h-52 md:h-56 lg:h-64 w-full overflow-hidden'>
+        <img
+          src={project.image}
+          alt={project.title}
+          className='w-full h-full object-cover'
+        />
+      </div>
 
       {/* Content Section */}
-      <div className='p-4'>
+      <div className='p-4 flex-grow'>
         {/* Title */}
-        <div className='w-full h-12 border'>
+        <div className='w-full h-12'>
           <h3 className='title mb-2 text-xl font-bold tracking-tighter overflow-hidden whitespace-nowrap text-ellipsis max-w-full'>
             {project.title}
           </h3>
@@ -37,7 +39,7 @@ const ServisesCard = ({ project }) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-between items-center my-4 md:my-6">
+        <div className="flex justify-between items-center mt-auto">
           {/* Share Button */}
           <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-4 font-medium text-neutral-200 duration-500 sm:h-12 sm:px-6">
             <div className="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0">
