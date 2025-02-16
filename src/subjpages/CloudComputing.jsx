@@ -3,8 +3,10 @@ import React from 'react'
 const CloudComputing = () => {
   return (
     <div>
-       <h1>Project 1 Details</h1>
-       <p>This is the detailed page for Project 1.</p>
+       <div className='flex  gap-4 h-14 border border-black w-full justify-start items-center'>
+        <h1 className='text-xl'><b>CLOUD COMPUTING</b></h1>
+        <p className='text-md'>CS3591</p>
+        </div>
     </div>
   )
 }

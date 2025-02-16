@@ -26,7 +26,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -34,7 +34,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -42,7 +42,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -50,7 +50,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -58,7 +58,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
   ]
   export const IIYEAR=[
@@ -68,7 +68,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -76,7 +76,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -84,7 +84,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -92,7 +92,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: hero,
@@ -100,7 +100,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
   ]
 
@@ -119,7 +119,7 @@ export const LINKS = [
       description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: bigdataimg,
@@ -127,7 +127,7 @@ export const LINKS = [
       description: "From Big Data Fundamentals to Advanced Analytics: Mastering NoSQL, Hadoop, and MapReduce for Real-World Data Challenges",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: multimediaimg,
@@ -135,7 +135,7 @@ export const LINKS = [
       description: "Comprehensive Guide to Multimedia and Animation: A Lab Manual for Learning Design Principles, Tools, and Practical Applications in an Academic Setting",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: sdnimg,
@@ -143,7 +143,7 @@ export const LINKS = [
       description: "Mastering Software Defined Networks: A Comprehensive Lab Manual for Designing, Configuring, and Managing Programmable, Scalable, and Future-Ready Network Architectures Using Cutting-Edge Tools and Techniques",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image: ooseimg,
@@ -152,7 +152,7 @@ export const LINKS = [
       description: "Mastering Object-Oriented Software Engineering: A Comprehensive Lab Manual for Designing, Developing, and Deploying Robust, Scalable, and Maintainable Software Systems Using Modern Principles and Best Practices",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     }
   ]
   export const IVYEAR=[
@@ -162,7 +162,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image:hero,
@@ -170,7 +170,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image:hero,
@@ -178,7 +178,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     },
     {
       image:hero,
@@ -186,7 +186,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
-      link: "/cloud-computing"
+      link: "/proto-type"
     }
   ]
 
