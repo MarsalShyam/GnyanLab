@@ -114,54 +114,54 @@ const CloudComputing = () => {
         className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 sm:translate-x-0`}
         aria-label="Sidebar">
-        <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-          <ul className="space-y-2 font-medium">
+        <div className="h-full px-3 pb-4 overflow-y-auto  bg-[#F3F4F6]">
+          <ul className="space-y-3 font-medium">
 
             <li>
-              <div onClick={() => handleButtonClick(1)} className={`px-1 py-2 rounded ${selectedExp === 1 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(1)} className={`px-1 py-2 rounded ${selectedExp === 1 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different 
               flavours of Linux or Windows OS on top of windows 8 and above. 
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(2)} className={`px-1 py-2 rounded ${selectedExp === 2 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(2)} className={`px-1 py-2 rounded ${selectedExp === 2 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               2. Install a C compiler in the virtual machine created using a virtual box and execute Simple 
               Programs. 
               </div></li>
             <li>
-              <div onClick={() => handleButtonClick(3)} className={`px-1 py-2 rounded ${selectedExp === 3 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(3)} className={`px-1 py-2 rounded ${selectedExp === 3 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               3. Install Google App Engine. Create a hello world app and other simple web applications 
               using python/java. 
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(4)} className={`px-1 py-2 rounded ${selectedExp === 4 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(4)} className={`px-1 py-2 rounded ${selectedExp === 4 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               4. Use the GAE launcher to launch the web applications. 
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(5)} className={`px-1 py-2 rounded ${selectedExp === 5 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(5)} className={`px-1 py-2 rounded ${selectedExp === 5 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               5. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not 
               present in CloudSim. 
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(6)} className={`px-1 py-2 rounded ${selectedExp === 6 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div onClick={() => handleButtonClick(6)} className={`px-1 py-2 rounded ${selectedExp === 6 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               6. Find a procedure to transfer the files from one virtual machine to another virtual machine. 
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div conClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               7. Install Hadoop single node cluster and run simple applications like wordcount. 
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded ${selectedExp === 8 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div conClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded ${selectedExp === 8 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               8. Creating and Executing Your First Container Using Docker. 
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded ${selectedExp === 9 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+              <div conClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded ${selectedExp === 9 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               9. Run a Container from Docker Hub 
               </div>
             </li>
