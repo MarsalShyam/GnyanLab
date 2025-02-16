@@ -1,184 +1,188 @@
-import React from 'react'
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-const Content = () =>  {
+const Content = () => {
+  const formRef = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Send email using EmailJS
+    emailjs
+      .sendForm(
+        "service_fhcdndj", // Replace with your EmailJS service ID
+        "template_uzydIyp", // Replace with your EmailJS template ID
+        formRef.current,
+        "H8VIMX90Z4kw6X3JO" // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+
+    // Reset the form after submission
+    e.target.reset();
+  };
+
   return (
-    <div>extra content</div>
-    // <div className="min-h-screen bg-gray-100 font-sans">
-    //   {/* Header Section */}
-    //   <header className="bg-blue-600 text-white py-8 text-center">
-    //     <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
-    //     <p className="mt-2 text-lg">
-    //       Learn how to set up virtual machines and explore cloud computing experiments.
-    //     </p>
-    //   </header>
+    <div className="min-h-screen bg-[#9CC1DE] font-sans">
+      {/* Header Section */}
+      <motion.header
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="bg-gradient-to-r from-[#FFA1AD] to-[#FFC8D4] text-white py-12 text-center rounded-b-3xl shadow-lg"
+      >
+        <h1 className="text-4xl font-bold">Join Us and Contribute</h1>
+        <p className="mt-2 text-lg">
+          We'd love to hear from you! Join our community and make an impact.
+        </p>
+      </motion.header>
 
-    //   {/* Main Content Section */}
-    //   <main className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-    //     {/* Documentation Section */}
-    //     <section className="bg-white p-6 rounded-lg shadow-md">
-    //       <h2 className="text-2xl font-bold text-blue-600 mb-4">Documentation</h2>
+      {/* Main Content Section */}
+      <motion.main className="container mx-auto px-4 py-12">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left Side: Description */}
+          <motion.div className="text-center md:text-left p-6 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out cursor-pointer">
+            <h2 className="text-3xl font-bold text-[#FFA1AD] mb-4">Why Join Us?</h2>
+            <p className="text-gray-700 mb-6">
+              Become part of a growing community that values innovation, collaboration, and creativity. Whether you're a developer, designer, or just passionate about technology, there's a place for you here.
+            </p>
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              <li>Collaborate with like-minded individuals</li>
+              <li>Work on exciting open-source projects</li>
+              <li>Learn and grow your skills</li>
+              <li>Make a real-world impact</li>
+            </ul>
+          </motion.div>
 
-    //       {/* Table of Contents */}
-    //       <div className="mb-6">
-    //         <h3 className="text-xl font-semibold text-gray-800">Table of Contents</h3>
-    //         <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //           <li>Prerequisites</li>
-    //           <li>Setup Virtual Machine</li>
-    //           <li>Install Ubuntu Linux</li>
-    //           <li>Additional Resources</li>
-    //         </ul>
-    //       </div>
+          {/* Right Side: Contact Form */}
+          <motion.div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out cursor-pointer">
+            <h2 className="text-2xl font-bold text-[#FFA1AD] mb-6 text-center">Get in Touch</h2>
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+              {/* Name Field */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Your Name"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FFA1AD] focus:border-[#FFA1AD] sm:text-sm cursor-text"
+                  required
+                />
+              </div>
 
-    //       {/* Prerequisites */}
-    //       <div className="mb-6">
-    //         <h3 className="text-xl font-semibold text-gray-800">Prerequisites</h3>
-    //         <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //           <li>Windows 10/11</li>
-    //           <li>8GB RAM (16GB recommended)</li>
-    //           <li>20GB Free Disk Space</li>
-    //           <li>Internet Connection</li>
-    //         </ul>
-    //       </div>
+              {/* Email Field */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  placeholder="your.email@example.com"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FFA1AD] focus:border-[#FFA1AD] sm:text-sm cursor-text"
+                  required
+                />
+              </div>
 
-    //       {/* Setup Virtual Machine */}
-    //       <div className="mb-6">
-    //         <h3 className="text-xl font-semibold text-gray-800">Setup Virtual Machine</h3>
-    //         <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
-    //           <li>
-    //             Download VirtualBox:{" "}
-    //             <a
-    //               href="https://www.virtualbox.org/"
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="text-blue-500 hover:underline"
-    //             >
-    //               VirtualBox For Windows
-    //             </a>
-    //           </li>
-    //           <li>Run Install: Download and run the .exe file.</li>
-    //           <li>Follow Prompts: Accept default settings.</li>
-    //           <li>Restart PC: If prompted.</li>
-    //         </ol>
-    //       </div>
+              {/* Message Field */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us why you want to join..."
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FFA1AD] focus:border-[#FFA1AD] sm:text-sm cursor-text"
+                  required
+                ></textarea>
+              </div>
 
-    //       {/* Install Ubuntu Linux */}
-    //       <div className="mb-6">
-    //         <h3 className="text-xl font-semibold text-gray-800">Install Ubuntu Linux</h3>
-    //         <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
-    //           <li>
-    //             Download:{" "}
-    //             <a
-    //               href="https://ubuntu.com/download/desktop"
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="text-blue-500 hover:underline"
-    //             >
-    //               Ubuntu Desktop ISO (Ubuntu 24.04.1 LTS)
-    //             </a>
-    //           </li>
-    //           <li>Create Virtual Machine:
-    //             <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //               <li>Open VirtualBox.</li>
-    //               <li>Click New: Name it "Ubuntu VM".</li>
-    //               <li>Select Type: Linux, Ubuntu (64-bit).</li>
-    //               <li>RAM: Allocate 2048 MB (4096 MB recommended).</li>
-    //               <li>Hard Disk: Create a 20GB VDI, dynamically allocated.</li>
-    //             </ul>
-    //           </li>
-    //           <li>Attach ISO: Go to Settings &gt; Storage, add Ubuntu ISO.</li>
-    //           <li>Start VM: Boot from ISO.</li>
-    //           <li>Install Ubuntu:
-    //             <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //               <li>Select "Erase disk and install Ubuntu".</li>
-    //               <li>Choose Normal installation.</li>
-    //               <li>Follow on-screen instructions.</li>
-    //             </ul>
-    //           </li>
-    //         </ol>
-    //       </div>
+              {/* Submit Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                type="submit"
+                className="w-full bg-[#FFA1AD] text-white py-2 px-4 rounded-md hover:bg-[#FFC8D4] transition duration-300 ease-in-out cursor-pointer"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </section>
+      </motion.main>
 
-    //       {/* Additional Resources */}
-    //       <div>
-    //         <h3 className="text-xl font-semibold text-gray-800">Additional Resources</h3>
-    //         <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //           <li>
-    //             <a
-    //               href="#"
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="text-blue-500 hover:underline"
-    //             >
-    //               College Lab Manual 1st Experiment
-    //             </a>
-    //           </li>
-    //           <li>
-    //             <a
-    //               href="#"
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="text-blue-500 hover:underline"
-    //             >
-    //               VirtualBox Manual
-    //             </a>
-    //           </li>
-    //           <li>
-    //             <a
-    //               href="#"
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="text-blue-500 hover:underline"
-    //             >
-    //               Ubuntu Guide
-    //             </a>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </section>
-
-    //     {/* Video Section */}
-    //     <section className="bg-white p-6 rounded-lg shadow-md">
-    //       <h2 className="text-2xl font-bold text-blue-600 mb-4">Video Tutorial</h2>
-    //       <p className="text-gray-700 mb-6">
-    //         Watch the step-by-step video guide below:
-    //       </p>
-
-    //       {/* Embedded Video */}
-    //       <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
-    //         <iframe
-    //           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    //           title="YouTube video player"
-    //           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    //           allowFullScreen
-    //           className="absolute top-0 left-0 w-full h-full"
-    //         ></iframe>
-    //       </div>
-
-    //       {/* Video Documentation */}
-    //       <div className="mt-6">
-    //         <h3 className="text-xl font-semibold text-gray-800">Video Documentation</h3>
-    //         <p className="text-gray-700 mt-2">
-    //           This video covers the following topics:
-    //           <ul className="list-disc pl-5 mt-2 text-gray-700">
-    //             <li>Setting up VirtualBox</li>
-    //             <li>Installing Ubuntu Linux</li>
-    //             <li>Troubleshooting common issues</li>
-    //           </ul>
-    //         </p>
-    //       </div>
-    //     </section>
-    //   </main>
-
-    //   {/* Footer Section */}
-    //   <footer className="bg-blue-600 text-white py-6 text-center">
-    //     <p className="text-lg">🙏 Thank you for visiting!</p>
-    //     <p className="mt-2">
-    //       I hope this guide helps you set up your virtual machine and install Ubuntu Linux. If you found it useful,
-    //       consider giving the repo a star ⭐ or sharing it with others. Every bit of support is appreciated! 🌟
-    //     </p>
-    //     <p className="mt-2">😊 Enjoy your cloud computing experiments!</p>
-    //   </footer>
-    // </div>
+      {/* Footer Section */}
+      <motion.footer className="bg-gradient-to-r from-[#FFA1AD] to-[#FFC8D4] text-white py-8 text-center rounded-t-3xl shadow-lg">
+        <div className="container mx-auto px-4">
+          <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
+          <p className="text-sm mb-6">
+            Follow us on social media and stay updated with the latest news and updates.
+          </p>
+          <div className="flex justify-center space-x-6 mb-6">
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-white hover:text-blue-600 transition duration-300"
+            >
+              <i className="fab fa-facebook-f text-2xl"></i>
+            </motion.a>
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-white hover:text-black transition duration-300"
+            >
+              <i className="fab fa-twitter text-2xl"></i>
+            </motion.a>
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-white hover:text-red-500 transition duration-300"
+            >
+              <i className="fab fa-instagram text-2xl"></i>
+            </motion.a>
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-white hover:to-blue-400 transition duration-300"
+            >
+              <i className="fab fa-linkedin-in text-2xl"></i>
+            </motion.a>
+          </div>
+          <p className="text-sm">
+            © 2023 Your Organization. All rights reserved.
+          </p>
+        </div>
+      </motion.footer>
+    </div>
   );
 };
 
-export default Content
+export default Content;
