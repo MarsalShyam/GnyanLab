@@ -7,7 +7,8 @@ const Exp1 = () =>  {
       <header className="bg-blue-600 text-white py-8 text-center">
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
         <p className="mt-2 text-lg">
-          Learn how to set up virtual machines and explore cloud computing experiments.
+        1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different 
+        flavours of Linux or Windows OS on top of windows 8 and above. 
         </p>
       </header>
 
@@ -144,9 +145,9 @@ const Exp1 = () =>  {
           {/* Embedded Video */}
           <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              src="https://www.youtube.com/embed/5_6qXwogcA8?si=aQ6ieOpkmTiSipDH"
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>

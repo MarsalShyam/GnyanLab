@@ -1,5 +1,7 @@
 import React from 'react'
-import db from '../assets/db.jpg'
+// import db from '../assets/db.jpg'
+import logonew from '../assets/logonew.svg'
+import kksir from '../assets/contributorImg/kksir.png'
 import { useState, useEffect, useRef } from 'react';
 import Exp1 from './cloudcompting_exps/Exp1'
 import Exp2 from './cloudcompting_exps/Exp2'
@@ -58,7 +60,7 @@ const CloudComputing = () => {
                 </svg>
               </button>
               <a href="#" className="flex ms-2 md:me-24">
-                <img src={db} className="h-8 me-3" alt="FlowBite Logo" />
+                <img src={logonew} className="h-8 me-3" alt="FlowBite Logo" />
                 <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Gnyanlab</span>
               </a>
             </div>
@@ -69,7 +71,7 @@ const CloudComputing = () => {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded={isDropdownOpen}>
                 <span className="sr-only">Open user menu</span>
-                <img className="w-8 h-8 rounded-full" src={db} alt="user photo" />
+                <img className="w-8 h-8 rounded-full" src={kksir} alt="user photo" />
               </button>
 
               {/* User DropDown Menu */}
@@ -78,7 +80,7 @@ const CloudComputing = () => {
                 <div ref={dropdownRef} className="absolute right-0 mt-2 w-48 bg-white divide-y divide-gray-100 rounded-sm shadow-md dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
                   <div className="px-4 py-3">
                     <p className="text-sm text-gray-900 dark:text-white" role="none">
-                      Mr. Sawej Ali
+                      Mr.R.KrishnaKumar, BE/CSE
                     </p>
                     <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
                       sawejkumar@gmail.com

@@ -1,5 +1,6 @@
 import hero from "../assets/nor.avif"
 import db from "../assets/db.jpg"
+import kksir from "../assets/contributorImg/kksir.png"
 import cloudimg from "../assets/cloudimg.jpg"
 import bigdataimg from "../assets/bigdataimg.avif"
 import iotimg from "../assets/iotimg.jpg"
@@ -109,16 +110,16 @@ export const LINKS = [
       image: cloudimg,
       title: "CLOUD COMPUTING",
       description: "Mastering Cloud Architecture, Virtualization, and Security: Exploring Models, Infrastructure, and Deployment Strategies to Build Scalable and Secure Cloud Solutions",
-      authpic:db,
-      author:"ganesh Das (Assistence Proffesor)",
+      authpic:kksir,
+      author:"Mr.R.Krishna Kumar, AP/CSE",
       link: "/cloud-computing"
     },
     {
       image: iotimg,
-      title: "EMBEDDED SYSTEMS AND IOT ram is a good boy",
+      title: "EMBEDDED SYSTEMS AND IOT",
       description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
       authpic:db,
-      author:"ganesh",
+      author:"Mrs.P.Vaijayanthi, AP/CSE",
       link: "/proto-type"
     },
     {
@@ -126,7 +127,7 @@ export const LINKS = [
       title: "BIG DATA ANALYTICS",
       description: "From Big Data Fundamentals to Advanced Analytics: Mastering NoSQL, Hadoop, and MapReduce for Real-World Data Challenges",
       authpic:db,
-      author:"ganesh",
+      author:"Mr.K.Vijayprabakaran, AP/CSE",
       link: "/proto-type"
     },
     {
@@ -134,7 +135,7 @@ export const LINKS = [
       title: "Multimedia and Animation",
       description: "Comprehensive Guide to Multimedia and Animation: A Lab Manual for Learning Design Principles, Tools, and Practical Applications in an Academic Setting",
       authpic:db,
-      author:"ganesh",
+      author:"Ms.S.Pavithra, AP/CSE",
       link: "/proto-type"
     },
     {
@@ -142,7 +143,7 @@ export const LINKS = [
       title: "Software Defined Networks",
       description: "Mastering Software Defined Networks: A Comprehensive Lab Manual for Designing, Configuring, and Managing Programmable, Scalable, and Future-Ready Network Architectures Using Cutting-Edge Tools and Techniques",
       authpic:db,
-      author:"ganesh",
+      author:"Mr.Venkatasan, AP/CSE",
       link: "/proto-type"
     },
     {
@@ -151,7 +152,7 @@ export const LINKS = [
       title:"OOSE",
       description: "Mastering Object-Oriented Software Engineering: A Comprehensive Lab Manual for Designing, Developing, and Deploying Robust, Scalable, and Maintainable Software Systems Using Modern Principles and Best Practices",
       authpic:db,
-      author:"ganesh",
+      author:"Mrs.P.Sathyasutha, AP/CSE",
       link: "/proto-type"
     }
   ]
