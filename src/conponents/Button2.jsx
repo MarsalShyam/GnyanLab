@@ -21,6 +21,7 @@ const Button2 = () => {
 
       {/* Buttons for selecting years */}
       <div className="flex space-x-4 md:space-x-8 mb-4 mx-2" style={{ zIndex: 30, position: 'relative' }}>
+
         <button
           className={`px-4 py-2 rounded ${
             selectedYear === 1 ? 'bg-blue-500 text-white' : 'bg-gray-200'
@@ -61,6 +62,7 @@ const Button2 = () => {
 
       {/* Content divs */}
       <div className="w-full mt-1">
+        
         {selectedYear === 1 && (
           <div className="p-4 py-0 rounded">
             <Iyear/>
