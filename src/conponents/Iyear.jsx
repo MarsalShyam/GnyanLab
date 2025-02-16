@@ -25,7 +25,7 @@ import LabCard2 from './LabCard2';
 
 const Iyear = () => {
   return (
-    <section className=' border container mx-auto py-10' id="dishes">
+    <section className=' container mx-auto py-10' id="dishes">
       <h2 className='mb-8 text-center text-3xl tracking-tighter lg:text-4xl border-b-2 border-gray-300 pb-4'>
         I Year Lab
       </h2>

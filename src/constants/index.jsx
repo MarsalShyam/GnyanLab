@@ -7,6 +7,7 @@ import multimediaimg from "../assets/multimediaimg.avif"
 import sdnimg from "../assets/sdnimg.jpg"
 import ooseimg from "../assets/ooseimg.png"
 
+
 export const LINKS = [
     { text: "I year", targetId: "Iyear" },
     { text: "II year", targetId: "IIyear" },
@@ -25,6 +26,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -32,6 +34,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -39,6 +42,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -46,6 +50,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -53,6 +58,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
   ]
   export const IIYEAR=[
@@ -62,6 +68,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -69,6 +76,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -76,6 +84,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -83,6 +92,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: hero,
@@ -90,6 +100,7 @@ export const LINKS = [
       description: "Creamy pasta with bacon and cheese",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
   ]
 
@@ -100,6 +111,7 @@ export const LINKS = [
       description: "Mastering Cloud Architecture, Virtualization, and Security: Exploring Models, Infrastructure, and Deployment Strategies to Build Scalable and Secure Cloud Solutions",
       authpic:db,
       author:"ganesh Das (Assistence Proffesor)",
+      link: "/cloud-computing"
     },
     {
       image: iotimg,
@@ -107,6 +119,7 @@ export const LINKS = [
       description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: bigdataimg,
@@ -114,6 +127,7 @@ export const LINKS = [
       description: "From Big Data Fundamentals to Advanced Analytics: Mastering NoSQL, Hadoop, and MapReduce for Real-World Data Challenges",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: multimediaimg,
@@ -121,6 +135,7 @@ export const LINKS = [
       description: "Comprehensive Guide to Multimedia and Animation: A Lab Manual for Learning Design Principles, Tools, and Practical Applications in an Academic Setting",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: sdnimg,
@@ -128,6 +143,7 @@ export const LINKS = [
       description: "Mastering Software Defined Networks: A Comprehensive Lab Manual for Designing, Configuring, and Managing Programmable, Scalable, and Future-Ready Network Architectures Using Cutting-Edge Tools and Techniques",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image: ooseimg,
@@ -136,6 +152,7 @@ export const LINKS = [
       description: "Mastering Object-Oriented Software Engineering: A Comprehensive Lab Manual for Designing, Developing, and Deploying Robust, Scalable, and Maintainable Software Systems Using Modern Principles and Best Practices",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     }
   ]
   export const IVYEAR=[
@@ -145,6 +162,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image:hero,
@@ -152,6 +170,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image:hero,
@@ -159,6 +178,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     },
     {
       image:hero,
@@ -166,6 +186,7 @@ export const LINKS = [
       description:"It is the best subject ever i seem",
       authpic:db,
       author:"ganesh",
+      link: "/cloud-computing"
     }
   ]
 

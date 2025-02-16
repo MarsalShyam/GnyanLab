@@ -1,4 +1,6 @@
 import React from 'react';
+// import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ServisesCard = ({ project }) => {
   return (
@@ -65,7 +67,10 @@ const ServisesCard = ({ project }) => {
           </button>
 
           {/* Read More Button */}
-          <button className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6">
+          {/* <NavLink to={`/project/${project.id}`} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6"></NavLink> */}
+          {/* <NavLink to={project.link}></NavLink> */}
+          {/* <Link to={project.link}></Link> */}
+          <Link to={project.link} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6">
             <span className="relative inline-flex overflow-hidden">
               <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">
                 Read More
@@ -74,7 +79,9 @@ const ServisesCard = ({ project }) => {
                 Read More
               </div>
             </span>
-          </button>
+          </Link>
+
+
         </div>
       </div>
     </div>
