@@ -6,7 +6,8 @@ import bigdataimg from "../assets/bigdataimg.avif"
 import iotimg from "../assets/iotimg.jpg"
 import multimediaimg from "../assets/multimediaimg.avif"
 import sdnimg from "../assets/sdnimg.jpg"
-import ooseimg from "../assets/ooseimg.png"
+// import ooseimg from "../assets/ooseimg.png"
+import oose from "../assets/oose.jpg"
 
 
 export const LINKS = [
@@ -147,7 +148,7 @@ export const LINKS = [
       link: "/proto-type"
     },
     {
-      image: ooseimg,
+      image: oose,
       // title: "Object Oriented Software Engeneering",
       title:"OOSE",
       description: "Mastering Object-Oriented Software Engineering: A Comprehensive Lab Manual for Designing, Developing, and Deploying Robust, Scalable, and Maintainable Software Systems Using Modern Principles and Best Practices",

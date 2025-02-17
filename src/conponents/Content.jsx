@@ -177,7 +177,7 @@ const Content = () => {
             </motion.a>
           </div>
           <p className="text-sm">
-            © 2023 Your Organization. All rights reserved.
+            © 2025 Your Organization. All rights reserved.
           </p>
         </div>
       </motion.footer>
