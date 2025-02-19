@@ -32,7 +32,7 @@ const Content = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#9CC1DE] font-sans">
+    <div id="contact" className="min-h-screen bg-[#9CC1DE] font-sans">
       {/* Header Section */}
       <motion.header
         initial={{ opacity: 0, y: -50 }}

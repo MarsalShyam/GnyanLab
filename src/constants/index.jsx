@@ -11,10 +11,10 @@ import oose from "../assets/oose.jpg"
 
 
 export const LINKS = [
-    { text: "I year", targetId: "Iyear" },
-    { text: "II year", targetId: "IIyear" },
-    { text: "III year", targetId: "IIIyear" },
-    { text: "IV year", targetId: "IVyear" },
+    { text: "I year", targetId: "options" },
+    { text: "II year", targetId: "options" },
+    { text: "III year", targetId: "options" },
+    { text: "IV year", targetId: "options" },
     { text: "About", targetId: "about" },
     // { text: "Mission", targetId: "mission" },
     // { text: "Review", targetId: "review" },

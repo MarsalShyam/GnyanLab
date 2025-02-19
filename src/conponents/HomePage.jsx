@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import HeroSection from './HeroSection'
 import About from './About'
 import Navbar from './Navbar'
@@ -7,13 +7,17 @@ import Content from './Content'
 import Button from './Button'
 import Button2 from './Button2'
 const HomePage = () => {
+  // Shared state for selected year
+  const [selectedYear, setSelectedYear] = useState(1);
   return (
     <>
     <div className='bg-[#9CC1DE]'> 
       <HeroSection/>
-      <Navbar/>
-      {/* <Button/> */}
-      <Button2/>
+       {/* Pass setSelectedYear to Navbar */}
+      <Navbar setSelectedYear={setSelectedYear}/>
+
+      {/* <Button/> */}{/* Pass selectedYear and setSelectedYear to Button2 */}
+      <Button2 selectedYear={selectedYear} setSelectedYear={setSelectedYear}/>
       <About/>
       <Content/>
       </div>

@@ -6,10 +6,8 @@ import IIyear from './IIyear';
 import IVyear from './IVyear';
 import IIIyear from './IIIyear';
 
-const Button2 = () => {
+const Button2 = ({ selectedYear, setSelectedYear }) => {
 
-  // State to track the currently selected year
-  const [selectedYear, setSelectedYear] = useState(1);
 
   // Function to handle button clicks
   const handleButtonClick = (year) => {
@@ -17,7 +15,7 @@ const Button2 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div id="options" className="flex flex-col items-center mt-10">
 
       {/* Buttons for selecting years */}
       <div className="flex space-x-4 md:space-x-8 mb-4 mx-2" style={{ zIndex: 30, position: 'relative' }}>
