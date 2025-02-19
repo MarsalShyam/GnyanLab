@@ -7,7 +7,7 @@ const Exp6 = () => {
       <header className="bg-blue-600 text-white py-8 text-center">
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
         <p className="mt-2 text-lg">
-        Find a procedure to transfer the files from one virtual machine to another virtual machine. 
+        6. Find a procedure to transfer the files from one virtual machine to another virtual machine. 
         </p>
       </header>
       </div>

@@ -7,7 +7,7 @@ const Exp8 = () => {
       <header className="bg-blue-600 text-white py-8 text-center">
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
         <p className="mt-2 text-lg">
-        Creating and Executing Your First Container Using Docker. 
+        8. Creating and Executing Your First Container Using Docker. 
         </p>
       </header>
       </div>
