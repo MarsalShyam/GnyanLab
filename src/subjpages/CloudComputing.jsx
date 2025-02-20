@@ -153,17 +153,17 @@ const CloudComputing = () => {
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
+              <div onClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               7. Install Hadoop single node cluster and run simple applications like wordcount. 
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded ${selectedExp === 8 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
+              <div onClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded ${selectedExp === 8 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               8. Creating and Executing Your First Container Using Docker. 
               </div>
             </li>
             <li>
-              <div conClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded ${selectedExp === 9 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
+              <div onClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded ${selectedExp === 9 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
               9. Run a Container from Docker Hub 
               </div>
             </li>

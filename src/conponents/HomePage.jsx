@@ -6,6 +6,7 @@ import Content from './Content'
 // import Button from './button'
 import Button from './Button'
 import Button2 from './Button2'
+import Rough from './Rough'
 const HomePage = () => {
   // Shared state for selected year
   const [selectedYear, setSelectedYear] = useState(1);
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Button2 selectedYear={selectedYear} setSelectedYear={setSelectedYear}/>
       <About/>
       <Content/>
+      <Rough/>
       </div>
     </>
   )

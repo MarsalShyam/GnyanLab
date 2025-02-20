@@ -8,8 +8,19 @@ const Exp2 = () => {
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
         <p className="mt-2 text-lg">
         2. Install a C compiler in the virtual machine created using a virtual box and execute Simple 
-              Programs.
+        Programs.
         </p>
+
+        {/* Download Button */}
+        <div className="mt-4">
+          <a
+            href={`${import.meta.env.BASE_URL}/cloudexp/ex2_3.pdf`} // Relative path to the PDF file
+            download="ex2_3.pdf" // Suggested filename for the downloaded file
+            className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
+          >
+            Download PDF
+          </a>
+        </div>
       </header>
 
       {/* Main Content Section */}

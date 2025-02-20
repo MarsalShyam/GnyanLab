@@ -1,15 +1,25 @@
 import React from 'react'
 
-const Exp1 = () =>  {
+const Exp1 = () => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Header Section */}
       <header className="bg-blue-600 text-white py-8 text-center">
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
         <p className="mt-2 text-lg">
-        1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different 
-        flavours of Linux or Windows OS on top of windows 8 and above. 
+          1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different
+          flavours of Linux or Windows OS on top of windows 8 and above.
         </p>
+
+        {/* Download Button */}
+        <div className="mt-4">
+          <a
+            href={`${import.meta.env.BASE_URL}/cloudexp/ex1cc.pdf`} // Relative path to the PDF file
+            download="ex1cc.pdf" // Suggested filename for the downloaded file
+            className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
+          >
+            Download PDF
+          </a>
+        </div>
       </header>
 
       {/* Main Content Section */}
@@ -146,8 +156,8 @@ const Exp1 = () =>  {
           <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/5_6qXwogcA8?si=aQ6ieOpkmTiSipDH"
-              title="YouTube video player" frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute top-0 left-0 w-full h-full"
             ></iframe>

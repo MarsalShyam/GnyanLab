@@ -1,7 +1,29 @@
 @import "tailwindcss";
-.title {
-    white-space: nowrap;       /* Prevents text from wrapping to the next line */
-    overflow: hidden;          /* Hides any content that overflows the container */
-    text-overflow: ellipsis;   /* Adds an ellipsis (...) when the text overflows */
-    max-width: 100%;           /* Ensures the text respects the container's width */
+
+/* Custom Tailwind CSS configuration */
+@layer base {
+  @apply text-lg tracking-tighter;
+}
+
+@layer components {
+  .hover-effect {
+    @apply transition-transform duration-500 ease-in-out;
   }
+}
+
+@layer utilities {
+  .hover-effect:hover {
+    @apply scale-125;
+  }
+}
+
+.title {
+  white-space: nowrap;
+  /* Prevents text from wrapping to the next line */
+  overflow: hidden;
+  /* Hides any content that overflows the container */
+  text-overflow: ellipsis;
+  /* Adds an ellipsis (...) when the text overflows */
+  max-width: 100%;
+  /* Ensures the text respects the container's width */
+}

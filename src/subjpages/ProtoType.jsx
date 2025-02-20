@@ -137,7 +137,7 @@ const ProtoType = () => {
                             </div>
                         </li>
                         <li>
-                            <div conClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
+                            <div onClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-amber-50 text-black' : 'bg-gray-800'}`}>
                                 7.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum deleniti cupiditate placeat
                             </div>
                         </li>
