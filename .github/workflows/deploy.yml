@@ -29,4 +29,4 @@ jobs:
         path: . # Ensure this points to your build output folder
 
     - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v3
