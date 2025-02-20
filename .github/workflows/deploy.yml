@@ -32,7 +32,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: dist/ # Vite's default build output folder
+        path: dist/ # Correct output folder for Vite
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v3
