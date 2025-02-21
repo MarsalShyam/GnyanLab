@@ -43,7 +43,7 @@ const ServisesCard = ({ project }) => {
         {/* Buttons */}
         <div className="flex justify-between items-center mt-auto">
           {/* Share Button */}
-          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-4 font-medium text-neutral-200 duration-500 sm:h-12 sm:px-6">
+          <button className="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-4 font-medium text-neutral-200 duration-500 sm:h-12 sm:px-6 border-amber-300">
             <div className="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0">
               Share
             </div>
@@ -70,7 +70,7 @@ const ServisesCard = ({ project }) => {
           {/* <NavLink to={`/project/${project.id}`} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6"></NavLink> */}
           {/* <NavLink to={project.link}></NavLink> */}
           {/* <Link to={project.link}></Link> */}
-          <Link to={project.link} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6">
+          <Link to={project.link} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6 flex items-center hover:text-white hover:bg-black">
             <span className="relative inline-flex overflow-hidden">
               <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">
                 Read More
