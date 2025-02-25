@@ -70,8 +70,8 @@ const ServisesCard = ({ project }) => {
           {/* <NavLink to={`/project/${project.id}`} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6"></NavLink> */}
           {/* <NavLink to={project.link}></NavLink> */}
           {/* <Link to={project.link}></Link> */}
-          <Link to={project.link} className="group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6">
-            <span className="relative inline-flex overflow-hidden">
+          <Link to={project.link} className="flex justify-center items-center group relative h-10 rounded-full border border-black bg-transparent px-4 text-neutral-950 sm:h-12 sm:px-6 hover:text-white hover:bg-black transition-all">
+            <span className=" relative inline-flex overflow-hidden">
               <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">
                 Read More
               </div>
