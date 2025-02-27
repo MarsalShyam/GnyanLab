@@ -1,38 +1,29 @@
 import React from 'react';
-
+import CodeSnippet from '../../constants/CodeSnippet';
+import {ex2codeString} from '../../constants/index.jsx'
 const Exp2 = () => {
+  
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
       {/* Header Section */}
-      <header className="bg-blue-600 text-white py-8 text-center">
+      <header className="bg-black text-white py-8 text-center">
         <h1 className="text-4xl font-bold">Cloud Computing Documentation</h1>
-        <p className="mt-2 text-lg">
-        2. Install a C compiler in the virtual machine created using a virtual box and execute Simple 
-        Programs.
-        </p>
-
-        {/* Download Button */}
-        <div className="mt-4">
-          <a
-            href={`${import.meta.env.BASE_URL}/cloudexp/ex2_3.pdf`} // Relative path to the PDF file
-            download="ex2_3.pdf" // Suggested filename for the downloaded file
-            className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
-          >
-            Download PDF
-          </a>
-        </div>
+        <h3 className="mt-2 text-lg">
+          2. Install a C compiler in the virtual machine created using a virtual box and execute Simple
+          Programs.
+        </h3>
       </header>
 
       {/* Main Content Section */}
-      <main className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <main className="bg-black text-white container mx-auto px-4 py-8 flex flex-col lg:flex-row">
         {/* Documentation Section */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-blue-600 mb-4">Documentation</h2>
+        <section className="  p-6 rounded-lg shadow-md lg:w-[90%] m-2">
+          <h2 className=" font-bold text-white text-5xl mb-4">Documentation</h2>
 
           {/* Table of Contents */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Table of Contents</h3>
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
+            <h3 className="text-xl font-semibold text-white">Table of Contents</h3>
+            <ul className="list-disc pl-5 mt-2 text-white">
               <li>Prerequisites</li>
               <li>Setup Virtual Machine (Refer to Experiment 1)</li>
               <li>Install Ubuntu Linux (Refer to Experiment 1)</li>
@@ -44,8 +35,8 @@ const Exp2 = () => {
 
           {/* Prerequisites */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Prerequisites</h3>
-            <ul className="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+            <h3 className="text-xl font-semibold text-white">Prerequisites</h3>
+            <ul className="list-disc pl-5 mt-2 text-white space-y-1">
               <li>Windows 10/11</li>
               <li>8GB RAM (16GB recommended)</li>
               <li>20GB Free Disk Space</li>
@@ -55,55 +46,55 @@ const Exp2 = () => {
 
           {/* Setup Virtual Machine */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Setup Virtual Machine</h3>
-            <p className="text-gray-700 mt-2">
+            <h3 className="text-xl font-semibold text-white">Setup Virtual Machine</h3>
+            <p className="text-white mt-2">
               Refer to the step-by-step solution provided in <strong>Experiment 1</strong> for setting up VirtualBox and creating the virtual machine.
             </p>
           </div>
 
           {/* Install Ubuntu Linux */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Install Ubuntu Linux</h3>
-            <p className="text-gray-700 mt-2">
+            <h3 className="text-xl font-semibold text-white">Install Ubuntu Linux</h3>
+            <p className="text-white mt-2">
               Refer to the step-by-step solution provided in <strong>Experiment 1</strong> for downloading and installing Ubuntu Linux.
             </p>
           </div>
 
           {/* Install C Compiler */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Install C Compiler</h3>
-            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+            <h3 className="text-xl font-semibold text-white">Install C Compiler</h3>
+            <ol className="list-decimal pl-5 mt-2 text-white space-y-1">
               <li>Open Terminal: Open the Terminal application in Ubuntu.</li>
-              <li>Update Package List: Run <code className="bg-gray-200 px-1 rounded">sudo apt update</code>.</li>
-              <li>Install GCC Compiler: Run <code className="bg-gray-200 px-1 rounded">sudo apt install gcc</code>.</li>
-              <li>Verify Installation: Run <code className="bg-gray-200 px-1 rounded">gcc --version</code> to check the installed version.</li>
+              <li>Update Package List: Run <code className="bg-black px-1 rounded">sudo apt update</code>.</li>
+              <li>Install GCC Compiler: Run <code className="bg-black px-1 rounded">sudo apt install gcc</code>.</li>
+              <li>Verify Installation: Run <code className="bg-black px-1 rounded">gcc --version</code> to check the installed version.</li>
             </ol>
           </div>
 
           {/* Execute Simple Programs */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-800">Execute Simple Programs</h3>
-            <ol className="list-decimal pl-5 mt-2 text-gray-700 space-y-1">
+            <h3 className="text-xl font-semibold text-white">Execute Simple Programs</h3>
+            <ol className="list-decimal pl-5 mt-2 text-white space-y-1">
               <li>
                 Create C Program:
-                <ul className="list-disc pl-5 mt-2 text-gray-700">
-                  <li>Open a text editor and write a simple C program. Save it as <code className="bg-gray-200 px-1 rounded">hello.c</code>.</li>
-                  <li>Example:
-                    <pre className="bg-gray-200 p-2 rounded overflow-auto text-sm">
-                      {`#include <stdio.h>\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}`}
-                    </pre>
+                <ul className="list-disc pl-5 mt-2 text-white">
+                  <li>Open a text editor and write a simple C program. Save it as <code className="bg-black px-1 rounded">hello.c</code>.</li>
+                  
+                  <li>
+                  Example:
+                  <CodeSnippet code={ex2codeString}/>
                   </li>
                 </ul>
               </li>
-              <li>Compile Program: Open Terminal, navigate to the directory containing <code className="bg-gray-200 px-1 rounded">hello.c</code>, and run <code className="bg-gray-200 px-1 rounded">gcc hello.c -o hello</code>.</li>
-              <li>Run Program: Execute the compiled program by running <code className="bg-gray-200 px-1 rounded">./hello</code>.</li>
+              <li>Compile Program: Open Terminal, navigate to the directory containing <code className="bg-black px-1 rounded">hello.c</code>, and run <code className="bg-black px-1 rounded">gcc hello.c -o hello</code>.</li>
+              <li>Run Program: Execute the compiled program by running <code className="bg-black px-1 rounded">./hello</code>.</li>
             </ol>
           </div>
 
           {/* Additional Resources */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">Additional Resources</h3>
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
+            <h3 className="text-xl font-semibold text-white">Additional Resources</h3>
+            <ul className="list-disc pl-5 mt-2 text-white">
               <li>
                 <a
                   href="#/cloud-computing"
@@ -139,9 +130,9 @@ const Exp2 = () => {
         </section>
 
         {/* Video Section */}
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-blue-600 mb-4">Video Tutorial</h2>
-          <p className="text-gray-700 mb-6">
+        <section className=" bg-black p-6 rounded-lg shadow-md m-2">
+          <h2 className="text-2xl font-bold text-blue-600 mb-4">REFERENCE</h2>
+          <p className="text-white mb-6">
             Watch the step-by-step video guide below:
           </p>
           {/* Embedded Video */}
@@ -157,21 +148,31 @@ const Exp2 = () => {
           </div>
           {/* Video Documentation */}
           <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-800">Video Documentation</h3>
-            <p className="text-gray-700 mt-2">
+            <h3 className="text-xl font-semibold text-white">Video Documentation</h3>
+            <p className="text-white mt-2">
               This video covers the following topics:
-              <ul className="list-disc pl-5 mt-2 text-gray-700">
+              <ul className="list-disc pl-5 mt-2 text-white">
                 <li>Installing GCC Compiler on Ubuntu</li>
                 <li>Writing and compiling a simple C program</li>
                 <li>Troubleshooting common issues</li>
               </ul>
             </p>
           </div>
+          {/* Download Button */}
+        <div className="mt-4 flex justify-center items-center">
+          <a
+            href={`${import.meta.env.BASE_URL}/cloudexp/ex2_3.pdf`} // Relative path to the PDF file
+            download="ex2_3.pdf" // Suggested filename for the downloaded file
+            className="bg-blue-600 text-white px-12 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
+          >
+            Download PDF
+          </a>
+        </div>
         </section>
       </main>
 
       {/* Footer Section */}
-      <footer className="bg-blue-600 text-white py-6 text-center">
+      <footer className="bg-black text-white py-6 text-center">
         <p className="text-lg">🙏 Thank you for visiting!</p>
         <p className="mt-2">
           I hope this guide helps you install a C compiler and execute simple programs. If you found it useful,

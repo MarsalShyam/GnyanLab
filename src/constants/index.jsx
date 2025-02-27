@@ -199,3 +199,15 @@ export const LINKS = [
   };
 
   
+  export const ex2codeString = `#include <stdio.h>
+  int main() {
+      printf("Hello, World!\\n");
+      return 0;
+  }
+  // Additional lines for demonstration
+  int add(int a, int b) {
+      return a + b;
+  }
+  void greet() {
+      printf("Welcome to the program!\\n");
+  }`;
