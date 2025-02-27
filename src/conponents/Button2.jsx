@@ -20,18 +20,24 @@ const Button2 = ({ selectedYear, setSelectedYear }) => {
       {/* Buttons for selecting years */}
       <div className="flex space-x-4 md:space-x-8 mb-4 mx-2" style={{ zIndex: 30, position: 'relative' }}>
 
-        <button
-          className={`px-4 py-2 rounded ${
+      <button onClick={() => handleButtonClick(1)} className={`group relative inline-flex items-center justify-center overflow-hidden rounded-4xl border border-blue-600 px-15 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white ${
+            selectedYear === 1 ? 'bg-blue-500 text-white' : 'bg-gray-900'
+          }`}>
+            <span>1 Year</span>
+
+          </button>
+        {/* <button
+          className={`px-15 py-2 rounded-4xl ${
             selectedYear === 1 ? 'bg-blue-500 text-white' : 'bg-gray-200'
           }`}
           onClick={() => handleButtonClick(1)}
         >
           1 Year
-        </button>
+        </button> */}
 
         <button
-          className={`px-4 py-2 rounded ${
-            selectedYear === 2 ? 'bg-blue-500 text-white' : 'bg-gray-200'
+          className={`group relative inline-flex items-center justify-center overflow-hidden rounded-4xl border border-blue-600 px-15 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white ${
+            selectedYear === 2 ? 'bg-blue-500 text-white' : 'bg-gray-900'
           }`}
           onClick={() => handleButtonClick(2)}
         >
@@ -39,8 +45,8 @@ const Button2 = ({ selectedYear, setSelectedYear }) => {
         </button>
 
         <button
-          className={`px-4 py-2 rounded ${
-            selectedYear === 3 ? 'bg-blue-500 text-white' : 'bg-gray-200'
+          className={`group relative inline-flex items-center justify-center overflow-hidden rounded-4xl border border-blue-600 px-15 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white ${
+            selectedYear === 3 ? 'bg-blue-500 text-white' : 'bg-gray-900'
           }`}
           onClick={() => handleButtonClick(3)}
         >
@@ -48,8 +54,8 @@ const Button2 = ({ selectedYear, setSelectedYear }) => {
         </button>
 
         <button
-          className={`px-4 py-2 rounded ${
-            selectedYear === 4 ? 'bg-blue-500 text-white' : 'bg-gray-200'
+          className={`group relative inline-flex items-center justify-center overflow-hidden rounded-4xl border border-blue-600 px-15 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white ${
+            selectedYear === 4 ? 'bg-blue-500 text-white' : 'bg-gray-900'
           }`}
           onClick={() => handleButtonClick(4)}
         >

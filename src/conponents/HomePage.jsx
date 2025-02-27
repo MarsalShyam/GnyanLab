@@ -12,7 +12,8 @@ const HomePage = () => {
   const [selectedYear, setSelectedYear] = useState(1);
   return (
     <>
-    <div className='bg-[#9CC1DE]'> 
+    {/* bg-[#9CC1DE] */}
+    <div className='bg-black text-white'> 
       <HeroSection/>
        {/* Pass setSelectedYear to Navbar */}
       <Navbar setSelectedYear={setSelectedYear}/>
