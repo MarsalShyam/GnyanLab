@@ -109,7 +109,7 @@ const ServisesCard = ({ project }) => {
       <div className="w-[60%] p-4 flex flex-col justify-between">
         {/* Title and Author Info */}
         <div>
-          <h3 className="text-xl md:text-2xl font-bold tracking-tighter mb-2">
+          <h3 className="syncopate-regular text-xl md:text-2xl font-bold tracking-tighter mb-2">
             {project.title}
           </h3>
 
@@ -125,7 +125,7 @@ const ServisesCard = ({ project }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm md:text-md text-gray-300 line-clamp-3">
+          <p className="sometype-mono-normal text-sm md:text-md text-gray-300 line-clamp-3">
             {project.description}
           </p>
         </div>
@@ -133,7 +133,7 @@ const ServisesCard = ({ project }) => {
         {/* Button */}
         <div className="flex justify-end mt-4">
         <NavLink to={project.link}>
-        <button  className="group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
+        <button  className="syncopate-regular group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
             <span>8 CHAPTERS</span>
             
             <div className="ml-1 transition group-hover:translate-x-1">

@@ -5,6 +5,7 @@ import CloudComputing from './subjpages/CloudComputing';
 // import AnotherPage from './subpages/anotherPage'; // Import other subpages
 import './App.css'
 import ProtoType from './subjpages/ProtoType';
+import './index.css';
 
 function App() {
 

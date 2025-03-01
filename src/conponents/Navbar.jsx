@@ -26,10 +26,11 @@ const Navbar = ({ setSelectedYear }) => {
         }
         setIsMobileMenuOpen(false);
     }
-
+    
+    // bg-gradient-to-r from-[#4882ffa5] from-40% via-[#4882ff8c] via-40% to-[#4882ff37] to-20% ...
     return (
-        <nav className='fixed top-4 z-50 flex w-full flex-col items-center justify-center'>
-            <div className='flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg'>
+        <nav className=' fixed top-4 z-50 flex w-full flex-col items-center justify-center'>
+            <div className='bg-linear-to-r from-[#4882ffdb] to-[#4882ff37] flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg'>
                 <img src={gn} alt="GNYAN1" width={80} height={22} />
                 <div className='hidden space-x-6 lg:flex'>
 
@@ -70,7 +71,7 @@ const Navbar = ({ setSelectedYear }) => {
                 </div>
             </div>
             {isMobileMenuOpen && (
-                <div className="w-full backdrop-blur-lg lg:hidden">
+                <div className=" w-full backdrop-blur-lg lg:hidden">
                     {LINKS.map((link, index) => {
                         // Extract the year number from the link text (e.g., "I year" → 1)
                         const yearMatch = link.text.match(/\b([IVX]+)\b/); // Match Roman numerals

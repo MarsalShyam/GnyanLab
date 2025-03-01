@@ -45,9 +45,10 @@ const CloudComputing = () => {
   }
 
   return (
-    <div>
-      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div className="px-3 py-3 lg:px-5 lg:pl-3">
+    <div className='bg-black'>
+      <div className="check text-white">ganesh</div>
+      <nav className="fixed top-0 z-50 w-full bg-[#000000a6] border-b border-[#155efc25]">
+        <div className="px-3 py-3 lg:px-5 lg:pl-3 border">
           <div className="flex items-center justify-between">
 
             {/* sidebar toggle Button */}
@@ -114,64 +115,65 @@ const CloudComputing = () => {
         ref={sidebarRef}
         id="logo-sidebar"
         className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 sm:translate-x-0`}
+          } bg-black border-r border-[#ffffff30] sm:translate-x-0 sometype-mono-normal`}
         aria-label="Sidebar">
-        <div className="h-full px-3 pb-4 overflow-y-auto  bg-[#F3F4F6]">
+
+        <div className="h-full px-3 pb-4 overflow-y-auto  bg-black border-l-amber-200">
           <ul className="space-y-3 font-medium">
 
             <li>
-              <div onClick={() => handleButtonClick(1)} className={`px-1 py-2 rounded ${selectedExp === 1 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different 
-              flavours of Linux or Windows OS on top of windows 8 and above. 
+              <div onClick={() => handleButtonClick(1)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 1 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different
+                flavours of Linux or Windows OS on top of windows 8 and above.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(2)} className={`px-1 py-2 rounded ${selectedExp === 2 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              2. Install a C compiler in the virtual machine created using a virtual box and execute Simple 
-              Programs. 
+              <div onClick={() => handleButtonClick(2)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 2 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                2. Install a C compiler in the virtual machine created using a virtual box and execute Simple
+                Programs.
               </div></li>
             <li>
-              <div onClick={() => handleButtonClick(3)} className={`px-1 py-2 rounded ${selectedExp === 3 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              3. Install Google App Engine. Create a hello world app and other simple web applications 
-              using python/java. 
+              <div onClick={() => handleButtonClick(3)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 3 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                3. Install Google App Engine. Create a hello world app and other simple web applications
+                using python/java.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(4)} className={`px-1 py-2 rounded ${selectedExp === 4 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              4. Use the GAE launcher to launch the web applications. 
+              <div onClick={() => handleButtonClick(4)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 4 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                4. Use the GAE launcher to launch the web applications.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(5)} className={`px-1 py-2 rounded ${selectedExp === 5 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              5. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not 
-              present in CloudSim. 
+              <div onClick={() => handleButtonClick(5)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 5 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                5. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not
+                present in CloudSim.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(6)} className={`px-1 py-2 rounded ${selectedExp === 6 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              6. Find a procedure to transfer the files from one virtual machine to another virtual machine. 
+              <div onClick={() => handleButtonClick(6)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 6 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                6. Find a procedure to transfer the files from one virtual machine to another virtual machine.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded ${selectedExp === 7 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              7. Install Hadoop single node cluster and run simple applications like wordcount. 
+              <div onClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 7 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                7. Install Hadoop single node cluster and run simple applications like wordcount.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded ${selectedExp === 8 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              8. Creating and Executing Your First Container Using Docker. 
+              <div onClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 8 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                8. Creating and Executing Your First Container Using Docker.
               </div>
             </li>
             <li>
-              <div onClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded ${selectedExp === 9 ? 'bg-[#155DFC] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-black'}`}>
-              9. Run a Container from Docker Hub 
+              <div onClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 9 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
+                9. Run a Container from Docker Hub
               </div>
             </li>
           </ul>
         </div>
       </aside>
 
-      <div className="p-4 sm:ml-64 mt-10">
+      <div className="sometype-mono-normal bg-black text-white p-4 sm:ml-64 mt-10">
         {selectedExp === 1 && (
 
           <Exp1 />

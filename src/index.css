@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 /* Custom Tailwind CSS configuration */
 @layer base {
   @apply text-lg tracking-tighter;
@@ -17,13 +19,51 @@
   }
 }
 
-.title {
-  white-space: nowrap;
-  /* Prevents text from wrapping to the next line */
-  overflow: hidden;
-  /* Hides any content that overflows the container */
-  text-overflow: ellipsis;
-  /* Adds an ellipsis (...) when the text overflows */
-  max-width: 100%;
-  /* Ensures the text respects the container's width */
+/* Ensure Custom Scrollbar Styles are Applied */
+@layer base {
+  .syncopate-regular {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .syncopate-bold {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+/*   
+  // <weight>: Use a value from 400 to 700
+  // <uniquifier>: Use a unique and descriptive class name */
+  
+  .sometype-mono-normal {
+    font-family: "Sometype Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #logo-sidebar {
+    overflow-y: auto !important; /* Ensure scrolling is enabled */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ffffff41 #2222227d; /* Thumb and Track color for Firefox */
+  }
+
+  #logo-sidebar::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+  }
+
+  #logo-sidebar::-webkit-scrollbar-track {
+    background: #222; /* Dark gray background */
+  }
+
+  #logo-sidebar::-webkit-scrollbar-thumb {
+    background: #ff9800; /* Orange scrollbar */
+    border-radius: 6px;
+  }
+
+  #logo-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #ff5722; /* Reddish-orange on hover */
+  }
 }
