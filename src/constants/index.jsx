@@ -108,14 +108,63 @@ export const LINKS = [
 
   export const IIIYEAR=[
     {
+      id:"cc",
       image: cloudimg,
       title: "CLOUD COMPUTING",
       description: "Mastering Cloud Architecture, Virtualization, and Security: Exploring Models, Infrastructure, and Deployment Strategies to Build Scalable and Secure Cloud Solutions",
       authpic:kksir,
       author:"Mr.R.Krishna Kumar, AP/CSE",
-      link: "/cloud-computing"
+      link: "/cloud-computing",
+      experiment:[
+        {
+          id:"exp1",
+          expno:1,
+          name:"1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different flavours of Linux or Windows OS on top of windows 8 and above.",
+        },
+        {
+          id:"exp2",
+          expno:2,
+          name:"2. Install a C compiler in the virtual machine created using a virtual box and execute Simple Programs.",
+        },
+        {
+          id:"exp3",
+          expno:3,
+          name:"3. Install Google App Engine. Create a hello world app and other simple web applications using python/java."
+        },
+        {
+          id:"exp4",
+          expno:4,
+          name:"4. Use the GAE launcher to launch the web applications."
+        },
+        {
+          id:"exp5",
+          expno:5,
+          name:"5. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not present in CloudSim."
+        },
+        {
+          id:"exp6",
+          expno:6,
+          name:"6. Find a procedure to transfer the files from one virtual machine to another virtual machine."
+        },
+        {
+          id:"exp7",
+          expno:7,
+          name:"7. Install Hadoop single node cluster and run simple applications like wordcount."
+        },
+        {
+          id:"exp8",
+          expno:8,
+          name:"8. Creating and Executing Your First Container Using Docker."
+        },
+        {
+          id:"exp9",
+          expno:9,
+          name:"9. Run a Container from Docker Hub."
+        },
+      ]
     },
     {
+      id:"esiot",
       image: iotimg,
       title: "EMBEDDED SYSTEMS AND IOT",
       description: "Mastering Embedded Systems and IoT: From I/O Interfacing to Building Low-Cost, Real-World Solutions with Arduino, Raspberry Pi, and Open Platforms",
@@ -124,6 +173,7 @@ export const LINKS = [
       link: "/proto-type"
     },
     {
+      id:"bd",
       image: bigdataimg,
       title: "BIG DATA ANALYTICS",
       description: "From Big Data Fundamentals to Advanced Analytics: Mastering NoSQL, Hadoop, and MapReduce for Real-World Data Challenges",
@@ -132,6 +182,7 @@ export const LINKS = [
       link: "/proto-type"
     },
     {
+      id:"mm",
       image: multimediaimg,
       title: "Multimedia and Animation",
       description: "Comprehensive Guide to Multimedia and Animation: A Lab Manual for Learning Design Principles, Tools, and Practical Applications in an Academic Setting",
@@ -140,6 +191,7 @@ export const LINKS = [
       link: "/proto-type"
     },
     {
+      id:"sdn",
       image: sdnimg,
       title: "Software Defined Networks",
       description: "Mastering Software Defined Networks: A Comprehensive Lab Manual for Designing, Configuring, and Managing Programmable, Scalable, and Future-Ready Network Architectures Using Cutting-Edge Tools and Techniques",
@@ -148,6 +200,7 @@ export const LINKS = [
       link: "/proto-type"
     },
     {
+      id:"oose",
       image: oose,
       // title: "Object Oriented Software Engeneering",
       title:"OOSE",

@@ -1,4 +1,5 @@
 import React from 'react'
+import { IIIYEAR } from '../constants';
 // import db from '../assets/db.jpg'
 import logonew from '../assets/logonew.svg'
 import kksir from '../assets/contributorImg/kksir.png'
@@ -119,56 +120,28 @@ const CloudComputing = () => {
         aria-label="Sidebar">
 
         <div className="h-full px-3 pb-4 overflow-y-auto  bg-black border-l-amber-200">
-          <ul className="space-y-3 font-medium">
 
-            <li>
-              <div onClick={() => handleButtonClick(1)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 1 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                1. Install Virtualbox/VMware/ Equivalent open source cloud Workstation with different
-                flavours of Linux or Windows OS on top of windows 8 and above.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(2)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 2 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                2. Install a C compiler in the virtual machine created using a virtual box and execute Simple
-                Programs.
-              </div></li>
-            <li>
-              <div onClick={() => handleButtonClick(3)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 3 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                3. Install Google App Engine. Create a hello world app and other simple web applications
-                using python/java.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(4)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 4 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                4. Use the GAE launcher to launch the web applications.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(5)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 5 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                5. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not
-                present in CloudSim.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(6)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 6 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                6. Find a procedure to transfer the files from one virtual machine to another virtual machine.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(7)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 7 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                7. Install Hadoop single node cluster and run simple applications like wordcount.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(8)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 8 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                8. Creating and Executing Your First Container Using Docker.
-              </div>
-            </li>
-            <li>
-              <div onClick={() => handleButtonClick(9)} className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === 9 ? 'bg-[#3d6fda39] text-[#FFFFFF]' : 'bg-black text-white'}`}>
-                9. Run a Container from Docker Hub
-              </div>
-            </li>
+          <ul className="space-y-3 font-medium">
+            {IIIYEAR.map((cc) => {
+              // Check if the course has an experiment array
+              if (cc.experiment && Array.isArray(cc.experiment)) {
+                return cc.experiment.map((exp) => (
+                  <li key={exp.id}>
+                    <div
+                      onClick={() => handleButtonClick(exp.expno)}
+                      className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === exp.expno
+                          ? "bg-[#3d6fda39] text-[#FFFFFF]"
+                          : "bg-black text-white"
+                        }`}
+                    >
+                      {exp.name}
+                    </div>
+                  </li>
+                ));
+              }
+              // If no experiment array, return null (or some fallback)
+              return null;
+            })}
           </ul>
         </div>
       </aside>
@@ -196,10 +169,10 @@ const CloudComputing = () => {
         {selectedExp === 7 && (
           <Exp7 />
         )}
-        {selectedExp === 7 && (
+        {selectedExp === 8 && (
           <Exp8 />
         )}
-        {selectedExp === 7 && (
+        {selectedExp === 9 && (
           <Exp9 />
         )}
 

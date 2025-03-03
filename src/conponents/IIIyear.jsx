@@ -9,7 +9,7 @@ const IIIyear = () => {
             III Year Lab
         </h2>
 
-        <div className='py-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 justify-centerm-2 sm:m-4 md:m-6 lg:m-10  overflow-x-auto'>
+        <div className=' py-7 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10 justify-centerm-2 sm:m-4 md:m-6 lg:m-10  overflow-x-auto'>
             {IIIYEAR.map((project,index)=>(
                 <LabCard2 key={index} project={project}/>
             ))}

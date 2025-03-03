@@ -13,7 +13,7 @@ const HeroSection = () => {
     <section className='relative flex h-screen items-center justify-center'>
         <div className='absolute inset-0 z-20 h-full w-full overflow-hidden'>
             {/* <video src={video} className='h-full w-full object-cover' muted autoPlay loop playsInline poster={hero}></video> */}
-            {/* <img src={slider1} className='h-full w-full object-cover'/> */}
+            <img src={slider1} className='h-full w-full object-cover'/>
         </div>
         {/* <div className='absolute inset-0 -z-10 bg-gradient-to-b from-transparent from-80% to-black'></div>
         <div className='border-red-500  relative z-20 flex h-screen flex-col justify-start pt-20 mx-24 '>
