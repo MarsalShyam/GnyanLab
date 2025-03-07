@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeSnippet from '../../constants/CodeSnippet';
 import {ex2codeString} from '../../constants/index.jsx'
-const Exp2 = () => {
+const Exp2 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   
   return (
     <div className="min-h-screen bg-black sometype-mono-normal text-white ">
@@ -172,7 +172,8 @@ const Exp2 = () => {
         
       </main>
       <div className='flex justify-around items-center m-2'>
-      <button  className="group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
+      <button onClick={onPrevious}
+          disabled={isPreviousDisabled}  className="group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
       <div className="ml-1 transition group-hover:translate-x-1">
               <svg
                 width="15"
@@ -191,10 +192,10 @@ const Exp2 = () => {
               </svg>
             </div>
             <span>PREVEIOUS</span>
-            
-            
           </button>
-          <button  className="group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
+          
+          <button onClick={onNext}
+          disabled={isNextDisabled} className="group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
             <span>NEXT</span>
             
             <div className="ml-1 transition group-hover:translate-x-1">
@@ -216,6 +217,7 @@ const Exp2 = () => {
             </div>
           </button>
       </div>
+       
       {/* Footer Section */}
       <footer className="bg-black text-white py-6 text-center border-t-2 border-[#155efc69]">
         <p className="text-lg">🙏 Thank you for visiting!</p>

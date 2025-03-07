@@ -22,6 +22,28 @@ const CloudComputing = () => {
   const dropdownRef = useRef(null);
   const sidebarRef = useRef(null);
 
+  // Extracting the experiments for "CLOUD COMPUTING"
+  const cloudComputingCourse = IIIYEAR.find((course) => course.id === "cc");
+  const experiments = cloudComputingCourse?.experiment || [];
+
+  // Finding the index of the currently selected experiment
+  const currentExpIndex = experiments.findIndex((exp) => exp.expno === selectedExp);
+
+  // Handle Next Button Click
+  const handleNext = () => {
+    if (currentExpIndex < experiments.length - 1) {
+      setSelectedExp(experiments[currentExpIndex + 1].expno);
+    }
+  };
+
+  // Handle Previous Button Click
+  const handlePrevious = () => {
+    if (currentExpIndex > 0) {
+      setSelectedExp(experiments[currentExpIndex - 1].expno);
+    }
+  };
+
+
   //handle click outside
   useEffect(() => {
 
@@ -44,6 +66,7 @@ const CloudComputing = () => {
   const handleButtonClick = (Exp) => {
     setSelectedExp(Exp);
   }
+
 
   return (
     <div className='bg-black'>
@@ -130,8 +153,8 @@ const CloudComputing = () => {
                     <div
                       onClick={() => handleButtonClick(exp.expno)}
                       className={`px-1 py-2 rounded border border-[#3d6fda] ${selectedExp === exp.expno
-                          ? "bg-[#3d6fda39] text-[#FFFFFF]"
-                          : "bg-black text-white"
+                        ? "bg-[#3d6fda39] text-[#FFFFFF]"
+                        : "bg-black text-white"
                         }`}
                     >
                       {exp.name}
@@ -148,32 +171,59 @@ const CloudComputing = () => {
 
       <div className="sometype-mono-normal bg-black text-white p-4 sm:ml-64 mt-10">
         {selectedExp === 1 && (
+          <Exp1 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
 
-          <Exp1 />
         )}
         {selectedExp === 2 && (
-          <Exp2 />
+          <Exp2 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 3 && (
-          <Exp3 />
+          <Exp3 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 4 && (
-          <Exp4 />
+          <Exp4 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 5 && (
-          <Exp5 />
+          <Exp5 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 6 && (
-          <Exp6 />
+          <Exp6 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 7 && (
-          <Exp7 />
+          <Exp7 onNext={handleNext}
+            onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 8 && (
-          <Exp8 />
+          <Exp8 onNext={handleNext}
+      onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
         {selectedExp === 9 && (
-          <Exp9 />
+          <Exp9 onNext={handleNext}
+      onPrevious={handlePrevious}
+            isNextDisabled={currentExpIndex === experiments.length - 1}
+            isPreviousDisabled={currentExpIndex === 0} />
         )}
 
       </div>

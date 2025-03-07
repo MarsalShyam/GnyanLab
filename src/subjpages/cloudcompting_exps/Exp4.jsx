@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exp4 = () => {
+const Exp4 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   return (
     <div className="min-h-screen bg-gray-100 sometype-mono-normal">
       {/* Header Section */}
@@ -21,6 +21,23 @@ const Exp4 = () => {
           </a>
         </div>
       </header>
+       {/* Navigation Buttons */}
+       <div className="flex justify-between mt-4">
+        <button
+          onClick={onPrevious}
+          disabled={isPreviousDisabled}
+          className={`px-4 py-2 rounded ${isPreviousDisabled ? "bg-gray-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"} text-white`}
+        >
+          Previous
+        </button>
+        <button
+          onClick={onNext}
+          disabled={isNextDisabled}
+          className={`px-4 py-2 rounded ${isNextDisabled ? "bg-gray-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"} text-white`}
+        >
+          Next
+        </button>
+      </div>
       </div>
   )
 }

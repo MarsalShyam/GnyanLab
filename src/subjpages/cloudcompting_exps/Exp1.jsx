@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exp1 = () => {
+const Exp1 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   return (
     <div className="border min-h-screen bg-gray-100 sometype-mono-normal">
       <header className="bg-blue-600 text-white py-8 text-center syncopate-regular">
@@ -179,6 +179,23 @@ const Exp1 = () => {
       </main>
 
       {/* Footer Section */}
+       {/* Navigation Buttons */}
+       <div className="flex justify-between mt-4">
+        <button
+          onClick={onPrevious}
+          disabled={isPreviousDisabled}
+          className={`px-4 py-2 rounded ${isPreviousDisabled ? "bg-gray-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"} text-white`}
+        >
+          Previous
+        </button>
+        <button
+          onClick={onNext}
+          disabled={isNextDisabled}
+          className={`px-4 py-2 rounded ${isNextDisabled ? "bg-gray-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"} text-white`}
+        >
+          Next
+        </button>
+      </div>
       <footer className="bg-blue-600 text-white py-6 text-center">
         <p className="text-lg">🙏 Thank you for visiting!</p>
         <p className="mt-2">

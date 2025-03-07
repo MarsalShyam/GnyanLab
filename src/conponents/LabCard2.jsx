@@ -92,8 +92,17 @@
 // export default ServisesCard;
 
 import React from "react";
+// import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 const ServisesCard = ({ project }) => {
+  // const [completedTopics, setCompletedTopics] = useState({})
+
+  // const getProgressbar = (subjectId) => {
+  //   const total = subjects.find((sub) => sub.id === subjectId).topics.length
+  //   const completed = completedTopics[subjectId]?.length || 0
+  //   return (completed / total) * 100;
+  // }
+  
   return (
     <div className="bg-[#000A40] text-white shadow-lg rounded-4xl relative flex flex-row">
       {/* Image Section */}
@@ -129,7 +138,13 @@ const ServisesCard = ({ project }) => {
             {project.description}
           </p>
         </div>
-
+        {/* progressbar */}
+        {/* <div className="w-full bg-gray-300 rounded-full h-4">
+                <div
+                  className="h-4 bg-green-500 rounded-full"
+                  style={{ width: `${getProgressbar(project.id)}%` }}
+                ></div>
+              </div> */}
         {/* Button */}
         <div className="flex justify-end mt-4">
         <NavLink to={project.link}>
