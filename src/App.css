@@ -4,3 +4,14 @@
     text-overflow: ellipsis;   /* Adds an ellipsis (...) when the text overflows */
     max-width: 100%;           /* Ensures the text respects the container's width */
   }
+  .list-item {
+    @apply transition-colors duration-200;
+  }
+  
+  .list-item:hover {
+    @apply bg-[#3d6fda1a];
+  }
+  
+  /* .checkbox-container {
+    @apply w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-200;
+  } */

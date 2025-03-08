@@ -1,5 +1,6 @@
 import React from 'react'
 import { IIIYEAR } from '../constants';
+import { FaCheck } from 'react-icons/fa';
 // import db from '../assets/db.jpg'
 import logonew from '../assets/logonew.svg'
 import kksir from '../assets/contributorImg/kksir.png'
@@ -173,7 +174,28 @@ const CloudComputing = () => {
                         : "bg-black text-white"
                         }`}
                     >
-                      {exp.name}
+                      <div className="e flex items-center">
+                        <div>
+                        {exp.name}
+                        </div>
+                        {/* Checkbox */}
+                        <div 
+                  className={`w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center transition-all
+                    ${readStatus[exp.id] 
+                      ? 'border-[#3d6fda] bg-[#3d6fda]' 
+                      : 'border-gray-500 bg-black'
+                    }`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleRead(exp.id);
+                  }}
+                >
+                    <FaCheck className={`m-1 text-lg ${readStatus[exp.id]?'text-white':'text-gray-500'}`}/>
+                  
+                </div>
+                      </div>
+                      
+                      
                     </div>
                   </li>
                 ));
@@ -181,6 +203,7 @@ const CloudComputing = () => {
               // If no experiment array, return null (or some fallback)
               return null;
             })}
+            
           </ul>
         </div>
       </aside>
