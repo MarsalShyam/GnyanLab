@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/postcss'
 import autoprefixer from 'autoprefixer';
 
 // https://vite.dev/config/
@@ -10,6 +10,12 @@ export default defineConfig({
     outDir: "dist"
   },
   // The base path must match your repository name (GnyanLab) and include a trailing slash (/).
-  plugins: [react(),
-    tailwindcss(),autoprefixer(),],
+  plugins: [react(),],
+  css:{
+    postcss:{
+      plugins:[
+        tailwindcss(),autoprefixer(),
+      ]
+    }
+  }
 })
