@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exp4 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
+const Exp4 = ({onToggleRead, isRead, onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   return (
     <div className="min-h-screen bg-gray-100 sometype-mono-normal">
       {/* Header Section */}
@@ -21,6 +21,12 @@ const Exp4 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
           </a>
         </div>
       </header>
+      <button 
+      onClick={onToggleRead}
+      className={`mt-4 px-4 py-2 rounded ${isRead ? 'bg-green-600' : 'bg-blue-600'}`}
+    >
+      {isRead ? 'Mark Unread' : 'Mark Read'}
+    </button>
        {/* Navigation Buttons */}
        <div className="flex justify-between mt-4">
         <button

@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeSnippet from '../../constants/CodeSnippet';
 import {ex2codeString} from '../../constants/index.jsx'
-const Exp2 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
+const Exp2 = ({onToggleRead,isRead, onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   
   return (
     <div className="min-h-screen bg-black sometype-mono-normal text-white ">
@@ -217,7 +217,12 @@ const Exp2 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
             </div>
           </button>
       </div>
-       
+      <button 
+      onClick={onToggleRead}
+      className={`mt-4 px-4 py-2 rounded ${isRead ? 'bg-green-600' : 'bg-blue-600'}`}
+    >
+      {isRead ? 'Mark Unread' : 'Mark Read'}
+    </button>
       {/* Footer Section */}
       <footer className="bg-black text-white py-6 text-center border-t-2 border-[#155efc69]">
         <p className="text-lg">🙏 Thank you for visiting!</p>

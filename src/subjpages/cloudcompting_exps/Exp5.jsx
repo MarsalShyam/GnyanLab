@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Exp5 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
+const Exp5 = ({onToggleRead, isRead, onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   return (
     <div className="min-h-screen bg-gray-100 sometype-mono-normal">
       {/* Header Section */}
@@ -197,6 +197,12 @@ const Exp5 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
           Next
         </button>
       </div>
+      <button 
+      onClick={onToggleRead}
+      className={`mt-4 px-4 py-2 rounded ${isRead ? 'bg-green-600' : 'bg-blue-600'}`}
+    >
+      {isRead ? 'Mark Unread' : 'Mark Read'}
+    </button>
       {/* Footer Section */}
       <footer className="bg-blue-600 text-white py-6 text-center">
         <p className="text-lg">🙏 Thank you for visiting!</p>

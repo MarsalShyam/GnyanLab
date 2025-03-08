@@ -91,17 +91,26 @@
 
 // export default ServisesCard;
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 const ServisesCard = ({ project }) => {
-  // const [completedTopics, setCompletedTopics] = useState({})
 
-  // const getProgressbar = (subjectId) => {
-  //   const total = subjects.find((sub) => sub.id === subjectId).topics.length
-  //   const completed = completedTopics[subjectId]?.length || 0
-  //   return (completed / total) * 100;
-  // }
+  const [progress, setProgress] = useState(0);
+  const totalExperiments = project.experiment?.length || 0;
+
+  useEffect(() => {
+    const storedProgress = localStorage.getItem(`progress_${project.id}`);
+    const readStatus = storedProgress ? JSON.parse(storedProgress) : {};
+    
+    const completed = Object.values(readStatus).filter(Boolean).length;
+    const calculatedProgress = totalExperiments 
+      ? Math.round((completed / totalExperiments) * 100)
+      : 0;
+    
+    setProgress(calculatedProgress);
+  }, [project.id, project.experiment]);
+
   
   return (
     <div className="bg-[#000A40] text-white shadow-lg rounded-4xl relative flex flex-row">
@@ -138,14 +147,18 @@ const ServisesCard = ({ project }) => {
             {project.description}
           </p>
         </div>
-        {/* progressbar */}
-        {/* <div className="w-full bg-gray-300 rounded-full h-4">
-                <div
-                  className="h-4 bg-green-500 rounded-full"
-                  style={{ width: `${getProgressbar(project.id)}%` }}
-                ></div>
-              </div> */}
-        {/* Button */}
+        {/* Progress Bar */}
+      <div className="mb-2">
+        <div className="bg-gray-700 rounded-full h-2.5">
+          <div
+            className="bg-blue-500 h-2.5 rounded-full transition-all"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+        <p className="text-sm text-gray-400 mt-1">
+          {progress}% completed ({progress/20} experiments)
+        </p>
+      </div>
         <div className="flex justify-end mt-4">
         <NavLink to={project.link}>
         <button  className="syncopate-regular group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">

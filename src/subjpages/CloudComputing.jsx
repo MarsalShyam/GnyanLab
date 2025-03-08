@@ -16,18 +16,35 @@ import Exp9 from './cloudcompting_exps/Exp9'
 
 const CloudComputing = () => {
   const [selectedExp, setSelectedExp] = useState(1);
-
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const sidebarRef = useRef(null);
+  const [readStatus, setReadStatus] = useState({});
 
   // Extracting the experiments for "CLOUD COMPUTING"
   const cloudComputingCourse = IIIYEAR.find((course) => course.id === "cc");
   const experiments = cloudComputingCourse?.experiment || [];
-
   // Finding the index of the currently selected experiment
   const currentExpIndex = experiments.findIndex((exp) => exp.expno === selectedExp);
+  
+
+  // progressbar with localstorage
+  useEffect(() => {
+    const storedProgress = localStorage.getItem('progress_cc');
+    setReadStatus(storedProgress ? JSON.parse(storedProgress) : {});
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('progress_cc', JSON.stringify(readStatus));
+  }, [readStatus]);
+
+  const toggleRead = (expId) => {
+    setReadStatus(prev => ({
+      ...prev,
+      [expId]: !prev[expId]
+    }));
+  };
 
   // Handle Next Button Click
   const handleNext = () => {
@@ -134,7 +151,6 @@ const CloudComputing = () => {
       </nav>
 
       {/* sidebar */}
-
       <aside
         ref={sidebarRef}
         id="logo-sidebar"
@@ -174,56 +190,74 @@ const CloudComputing = () => {
           <Exp1 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
 
         )}
         {selectedExp === 2 && (
           <Exp2 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 3 && (
           <Exp3 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 4 && (
           <Exp4 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 5 && (
           <Exp5 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 6 && (
           <Exp6 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 7 && (
           <Exp7 onNext={handleNext}
             onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 8 && (
           <Exp8 onNext={handleNext}
       onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
         {selectedExp === 9 && (
           <Exp9 onNext={handleNext}
       onPrevious={handlePrevious}
             isNextDisabled={currentExpIndex === experiments.length - 1}
-            isPreviousDisabled={currentExpIndex === 0} />
+            isPreviousDisabled={currentExpIndex === 0}
+            isRead={readStatus[experiments[currentExpIndex]?.id] || false}
+            onToggleRead={() => toggleRead(experiments[currentExpIndex]?.id)} />
         )}
 
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exp8 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
+const Exp8 = ({onToggleRead, isRead, onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
       {/* Header Section */}
@@ -10,6 +10,12 @@ const Exp8 = ({ onNext, onPrevious, isNextDisabled, isPreviousDisabled }) => {
         8. Creating and Executing Your First Container Using Docker. 
         </p>
       </header>
+      <button 
+      onClick={onToggleRead}
+      className={`mt-4 px-4 py-2 rounded ${isRead ? 'bg-green-600' : 'bg-blue-600'}`}
+    >
+      {isRead ? 'Mark Unread' : 'Mark Read'}
+    </button>
        {/* Navigation Buttons */}
        <div className="flex justify-between mt-4">
         <button
