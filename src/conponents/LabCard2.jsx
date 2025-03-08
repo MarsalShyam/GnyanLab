@@ -102,68 +102,75 @@ const ServisesCard = ({ project }) => {
   useEffect(() => {
     const storedProgress = localStorage.getItem(`progress_${project.id}`);
     const readStatus = storedProgress ? JSON.parse(storedProgress) : {};
-    
+
     const completed = Object.values(readStatus).filter(Boolean).length;
-    const calculatedProgress = totalExperiments 
+    const calculatedProgress = totalExperiments
       ? Math.round((completed / totalExperiments) * 100)
       : 0;
-    
+
     setProgress(calculatedProgress);
   }, [project.id, project.experiment]);
 
-  
+
   return (
-    <div className="bg-[#000A40] text-white shadow-lg rounded-4xl relative flex flex-row">
-      {/* Image Section */}
-      <div className="w-[40%] px-4 py-4 flex justify-center items-center">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="absolute top-[-6%] left-4 rounded-3xl h-[220px] w-[160px] object-cover border-[#080928] z-10"
-        />
-      </div>
-
-      {/* Content Section */}
-      <div className="w-[60%] p-4 flex flex-col justify-between">
-        {/* Title and Author Info */}
-        <div>
-          <h3 className="syncopate-regular text-xl md:text-2xl font-bold tracking-tighter mb-2">
-            {project.title}
-          </h3>
-
-          <div className="flex items-center gap-3 my-4">
-            <div className="w-10 h-10 bg-[#F2F2F2] rounded-full overflow-hidden">
-              <img
-                src={project.authpic}
-                alt="Author"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-sm text-gray-400">By {project.author}</span>
-          </div>
-
-          {/* Description */}
-          <p className="sometype-mono-normal text-sm md:text-md text-gray-300 line-clamp-3">
-            {project.description}
-          </p>
-        </div>
-        {/* Progress Bar */}
-      <div className="mb-2">
-        <div className="bg-gray-700 rounded-full h-2.5">
-          <div
-            className="bg-blue-500 h-2.5 rounded-full transition-all"
-            style={{ width: `${progress}%` }}
+    <div className="bg-[#000A40] text-white shadow-lg rounded-4xl flex-col">
+      <div className="relative flex flex-row">
+        {/* Image Section */}
+        <div className="w-[35%] sm:w-[30%] lg:w-[35%] 2xl:w-[30%]  px-4 py-4 flex justify-center items-center">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute top-[-6%] left-2  md:left-4 rounded-3xl object-cover border-[#080928] z-10
+      h-[190px] w-[110px] sm:h-[200px] sm:w-[140px]  md:w-[160px]
+      lg:h-[200px] lg:w-[140px] xl:w-[160px] 2xl:max-h-[250px] 2xl:max-w-[180px]"
           />
         </div>
-        <p className="text-sm text-gray-400 mt-1">
-          {progress}% completed ({progress/20} experiments)
-        </p>
+
+        {/* Content Section */}
+        <div className="w-[65%] sm:w-[70%] lg:w-[65%] 2xl:w-[70%] p-4 flex flex-col justify-between">
+          {/*Author Info */}
+          <div>
+            <h3 className="syncopate-regular text-xl md:text-2xl font-bold tracking-tighter mb-2 
+              whitespace-nowrap overflow-hidden text-ellipsis">
+              {project.title}
+            </h3>
+
+            {/* Description */}
+            <p className="sometype-mono-normal text-sm md:text-md text-gray-300 line-clamp-3">
+              {project.description}
+            </p>
+          </div>
+          {/* Progress Bar */}
+          <div className="my-3">
+            <div className="bg-gray-700 rounded-full h-2.5">
+              <div
+                className="bg-blue-500 h-2.5 rounded-full transition-all"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+            <p className="text-sm text-gray-400 mt-1">
+              {progress}% completed
+              {/* ({progress / 20} experiments) */}
+            </p>
+          </div>
+        </div>
       </div>
-        <div className="flex justify-end mt-4">
+      <div className="flex justify-between p-4">
+        {/* Author Info */}
+        <div className='flex justify-start items-center gap-2'>
+          <div className='text-blue-900 w-7 h-7 bg-[#F2F2F2] rounded-full overflow-hidden'>
+            <img
+              className='w-full h-full object-cover'
+              src={project.authpic}
+              alt='authpic'
+            />
+          </div>
+          <span className='text-sm text-gray-400'>By {project.author}</span>
+        </div>
         <NavLink to={project.link}>
-        <button  className="syncopate-regular group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-6 py-2 font-medium text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
-            <span>8 CHAPTERS</span>
-            
+          <button className="syncopate-regular group relative inline-flex items-center justify-center overflow-hidden rounded-3xl border border-blue-600 px-3 py-1 font-light text-neutral-200 transition duration-300 hover:bg-blue-600 hover:text-white">
+            <span>9 Exp</span>
+
             <div className="ml-1 transition group-hover:translate-x-1">
               <svg
                 width="15"
@@ -183,10 +190,10 @@ const ServisesCard = ({ project }) => {
             </div>
           </button>
         </NavLink>
-          
-        </div>
       </div>
+
     </div>
+
   );
 };
 
